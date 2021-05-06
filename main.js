@@ -47,7 +47,7 @@ var countDownEle = document.getElementById('countDown');
 var intervallo = setInterval(function () {
 
     if (secondi === 0) {
-        alert('Tempo scaduto... :-((');
+        alert('Inserisci i numeri che ricordi');
         clearInterval(intervallo);
     }
     else {
@@ -55,14 +55,16 @@ var intervallo = setInterval(function () {
     } countDownEle.innerHTML = secondi;
 
 }, 1000);
-
 //4- passati i 30 sec l'utente deve inserire i numeri uno alla volta tramite prompt()
 
 var numeriUtente = [];
 
-while (numeriUtente.length < 5) {
-    var numeroInserito = parseInt(prompt('inserisci il primo numero..'));
-    numeriUtente.push(numeroInserito);
-}
+setTimeout(function () {
+    while (numeriUtente.length < 5) {
+        var numeroInserito = parseInt(prompt('inserisci il primo numero..'));
+        numeriUtente.push(numeroInserito);
+        console.log('numeri inseriti dall\'utente ' + numeriUtente);
+    }
+}, 6000)
 
-console.log('numeri inseriti dall\'utente ' + numeriUtente);
+
