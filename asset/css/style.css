@@ -1,0 +1,43 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #303030;
+    margin: 0 auto;
+    text-align: center;
+}
+.sfondo
+{
+    height: 100%;
+    background-image: url('/asset/img/saw.jpg');
+    background-position: top, left;
+    background-size:cover
+}
+#countDown
+{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    color: red;
+    text-shadow: 1px 3px 7px #c7bbbb;
+}
+#winLose
+{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    color: #dfd1d0;
+    text-shadow: 5px 4px 10px #b31818;
+}

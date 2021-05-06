@@ -11,7 +11,7 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
 var numeriCasuali = [];
 var numeriUtente = [];
-var secondi = 3;
+var secondi = 30;
 var countDownEle = document.getElementById('countDown');
 
 
@@ -21,7 +21,7 @@ function numeroRandomn(min, max) {
 
 while (numeriCasuali.length < 5) {
 
-    var numero = numeroRandomn(1, 50)
+    var numero = numeroRandomn(1, 100)
 
     if (!numeriCasuali.includes(numero)) {
         numeriCasuali.push(numero);
@@ -70,7 +70,7 @@ setTimeout(function () {
     document.getElementById('winLose').innerHTML = `Hai indovinato ${numeriIndovinati.length}/di 5 numeri... ${numeriIndovinati}`;
 
 
-}, 4000);
+}, 31000);
 
 
 
