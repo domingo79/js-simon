@@ -25,13 +25,14 @@ function numeroRandomn(min, max) {
 
 while (numeriCasuali.length < 5) {
 
-    var numero = numeroRandomn(1, 3000)
+    var numero = numeroRandomn(1, 10)
 
     if (!numeriCasuali.includes(numero)) {
         numeriCasuali.push(numero);
     }
 }
-console.log(numeriCasuali);
+console.log('Numeri generati random: ' + numeriCasuali);
+
 //2- mostrare all'utente i numeri generati
 alert(`Prova a ricordare i numeri, 
 quando sarai pronto, fai click su OK.. 
@@ -40,7 +41,7 @@ ECCO I NUMERI: => ${numeriCasuali} <=
 RICORDATI CHE HAI 30 SECONDI`)
 
 //3-fare partire un countdown per l'utente
-var secondi = 30;
+var secondi = 5;
 var countDownEle = document.getElementById('countDown');
 
 var intervallo = setInterval(function () {
@@ -48,10 +49,20 @@ var intervallo = setInterval(function () {
     if (secondi === 0) {
         alert('Tempo scaduto... :-((');
         clearInterval(intervallo);
-
-    } else {
+    }
+    else {
         secondi--;
     } countDownEle.innerHTML = secondi;
 
 }, 1000);
 
+//4- passati i 30 sec l'utente deve inserire i numeri uno alla volta tramite prompt()
+
+var numeriUtente = [];
+
+while (numeriUtente.length < 5) {
+    var numeroInserito = parseInt(prompt('inserisci il primo numero..'));
+    numeriUtente.push(numeroInserito);
+}
+
+console.log('numeri inseriti dall\'utente ' + numeriUtente);
